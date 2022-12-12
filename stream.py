@@ -38,3 +38,20 @@ result2 = process2.communicate()
 image = Image.open('plot.png')
 st.image(image)
 st.caption('**Figure 1.** A simple scatter plot of *wt* as a function of *mpg* from the mtcars dataset.')
+
+
+st.subheader('3. MLB `ggplot2`')
+with st.expander('See code'):
+  code2 = '''ggplot() + 
+  geom_mlb_stadium(stadium_ids = "all_mlb", 
+                   stadium_segments = "all") + 
+  facet_wrap(~team) + 
+  coord_fixed() + 
+  theme_void()
+  '''
+  st.code(code2, language='R')
+process2 = subprocess.Popen(["Rscript", "plot2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+result2 = process2.communicate()
+image = Image.open('plot.png')
+st.image(image)
+st.caption('**Figure 1.** A simple scatter plot of *wt* as a function of *mpg* from the mtcars dataset.')
