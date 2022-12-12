@@ -1,6 +1,12 @@
 library(ggplot2)
+library(GeomMLBStadiums)
+library(dplyr)
 
-ggplot(mtcars, aes(mpg, wt)) +
-  geom_point()
+ggplot() + 
+  geom_mlb_stadium(stadium_ids = "all_mlb", 
+                   stadium_segments = "all") + 
+  facet_wrap(~team) + 
+  coord_fixed() + 
+  theme_void()
 
 ggsave('plot.png')
