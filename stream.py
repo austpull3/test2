@@ -25,10 +25,12 @@ st.write(result1)
 
 st.subheader('2. Creating a plot using `ggplot2`')
 with st.expander('See code'):
-  code2 = '''library(ggplot2)
-  ggplot(mtcars, aes(mpg, wt)) +
-    geom_point()
-  ggsave('plot.png')
+  code2 = '''ggplot() + 
+  geom_mlb_stadium(stadium_ids = "all_mlb", 
+                   stadium_segments = "all") + 
+  facet_wrap(~team) + 
+  coord_fixed() + 
+  theme_void()
   '''
   st.code(code2, language='R')
 process2 = subprocess.Popen(["Rscript", "plot.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
