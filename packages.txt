@@ -2,5 +2,6 @@ r-base
 r-base-dev
 r-cran-ggplot2
 r-cran-cowplot
+r-cran-devtools::install_github("bdilday/GeomMLBStadiums")
 r-cran-GeomMLBStadiums
 r-cran-dplyr
