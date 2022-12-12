@@ -25,6 +25,6 @@ with st.expander('See code'):
   st.code(code3, language='R')
 process3 = subprocess.Popen(["Rscript", "plot1.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result3 = process3.communicate()
-image = Image.open('plot1.png')
+image = Image.open('plot.png')
 st.image(image)
 
