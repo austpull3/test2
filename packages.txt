@@ -2,5 +2,5 @@ r-base
 r-base-dev
 r-cran-ggplot2
 r-cran-cowplot
-r-cran-GeomMLBStadiums
+r-cran-GeomMLBStadiums==0.0.0.9000
 r-cran-dplyr
