@@ -33,7 +33,7 @@ with st.expander('See code'):
   theme_void()
   '''
   st.code(code2, language='R')
-process2 = subprocess.Popen(["Rscript", "plot.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+process2 = subprocess.Popen(["Rscript", "plot2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result2 = process2.communicate()
 image = Image.open('plot.png')
 st.image(image)
