@@ -4,4 +4,3 @@ r-cran-ggplot2
 r-cran-cowplot
 r-cran-dplyr
 r-cran-devtools
-r-cran-bdilday/GeomMLBStadiums
