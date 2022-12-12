@@ -10,4 +10,4 @@ ggplot() +
   coord_fixed() + 
   theme_void()
 
-ggsave('plot.png') 
+ggsave('plot1.png') 
