@@ -52,6 +52,6 @@ with st.expander('See code'):
   st.code(code3, language='R')
 process3 = subprocess.Popen(["Rscript", "plot2.R"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
 result3 = process3.communicate()
-image = Image.open('plot.png')
-st.image(image)
-st.caption('**Figure 1.** A simple scatter plot of *wt* as a function of *mpg* from the mtcars dataset.')
+#image = Image.open('plot.png')
+#st.image(image)
+
